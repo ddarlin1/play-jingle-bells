@@ -20,13 +20,13 @@ body,
 }
 
 body {
-    background-color: var(--bright-red);
+    background: #D42D2F url("img/christmasphoto.jpeg") no-repeat center fixed;
     height: 100vh;
 }
 
 .container {
     background: var(--snow);
-    color: var(--wine-red);
+    color: var(--dark-green);
     flex-direction: column;
     border-radius: 10px;
     padding: 1em;
@@ -65,3 +65,36 @@ button:hover {
     background-color: var(--wine-red);
 }
 
+.animate-bell {
+    display: inline-block;
+    animation-name: ring;
+    animation-duration: 0.25s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+
+.animate-tree {
+    display: inline-block;
+    animation-name: rock;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes rock {
+    0% {
+        transform: rotate(25deg);
+    }
+    100% {
+        transform: rotate(-25deg);
+    }
+}
